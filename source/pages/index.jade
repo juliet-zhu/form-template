@@ -1,0 +1,124 @@
+extends template/base
+block vars
+  - var page = "home"
+  - BASEURL = ".."
+block content
+  .container
+    .row.title
+      .col-sm-12
+        h3 基本表单
+    .row
+      hr
+      .col-sm-6
+        form(role='form')
+          .form-group
+            label(for='exampleInputEmail1') 邮箱
+            input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+          .form-group
+            label(for='exampleInputPassword1') 密码
+            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+          .form-group
+            label(for='exampleInputFile') 上传文件
+            input#exampleInputFile(type='file')
+            p.help-block 这里是块级帮助文本
+          .checkbox
+            label
+              input(type='checkbox')
+              | 单选按钮
+          button.btn.btn-default(type='submit') 提交
+    .row.title
+      .col-sm-12
+        h3 行内表单
+    .row
+      hr
+      .col-sm-12
+        form.form-inline(role='form')
+          .form-group
+            label.sr-only(for='exampleInputEmail2') 邮箱
+            input#exampleInputEmail2.form-control(type='email', placeholder='Enter email')
+          .form-group
+            label.sr-only(for='exampleInputPassword2') 密码
+            input#exampleInputPassword2.form-control(type='password', placeholder='Password')
+          .checkbox
+            label
+              input(type='checkbox')
+              | 记住我
+          button.btn.btn-default(type='submit') 注册
+    .row.title
+      .col-sm-12
+        h3 水平表单
+    .row
+      hr
+      .col-sm-6
+        form.form-horizontal(role='form')
+          .form-group
+            label.col-sm-2.control-label(for='inputEmail3') 邮箱
+            .col-sm-10
+              input#inputEmail3.form-control(type='email', placeholder='Email')
+          .form-group
+            label.col-sm-2.control-label(for='inputPassword3') 密码
+            .col-sm-10
+              input#inputPassword3.form-control(type='password', placeholder='Password')
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              .checkbox
+                label
+                  input(type='checkbox')
+                  | 记住我
+          .form-group
+            .col-sm-offset-2.col-sm-10
+              button.btn.btn-default(type='submit') 注册
+    .row.title
+      .col-sm-12
+        h3 验证状态
+        p.help-block .has-success/.has-error/.has-warning 用在input的父级元素上
+        p.help-block .success/.error/.warning 用在input元素上
+    .row
+      hr
+      .col-sm-6
+        p.help-block .has-success/.has-error/.has-warning 用在input的父级元素上
+        .form-group.has-success
+          label.control-label(for='inputSuccess1') 成功状态的input
+          input#inputSuccess1.form-control(type='text')
+        .form-group.has-warning
+          label.control-label(for='inputWarning1') 警告状态的input
+          input#inputWarning1.form-control(type='text')
+        .form-group.has-error
+          label.control-label(for='inputError1') 错误状态的input
+          input#inputError1.form-control(type='text')
+      .col-sm-6
+        p.help-block .success/.error/.warning 用在input元素上
+        .form-group
+          label.control-label(for='inputSuccess1') 成功状态的input
+          input#inputSuccess1.form-control.success(type='text')
+        .form-group
+          label.control-label(for='inputWarning1') 警告状态的input
+          input#inputWarning1.form-control.warning(type='text')
+        .form-group
+          label.control-label(for='inputError1') 错误状态的input
+          input#inputError1.form-control.error(type='text')
+    .row.title
+      .col-sm-12
+        h3 按钮
+    .row
+      hr
+      .col-sm-8
+        button.btn.btn-default(type='button') Default
+        // Provides extra visual weight and identifies the primary action in a set of buttons
+        button.btn.btn-custome(type='button') Custome
+        // Add extra background img
+        button.btn.btn-primary(type='button') Primary
+        // Indicates a successful or positive action
+        button.btn.btn-success(type='button') Success
+        // Contextual button for informational alert messages
+        button.btn.btn-info(type='button') Info
+        // Indicates caution should be taken with this action
+        button.btn.btn-warning(type='button') Warning
+        // Indicates a dangerous or potentially negative action
+        button.btn.btn-danger(type='button') Danger
+        // Deemphasize a button by making it look like a link while maintaining button behavior
+        button.btn.btn-link(type='button') Link
+
+
+
+
