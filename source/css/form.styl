@@ -1,0 +1,115 @@
+/* Vars */
+//form-control
+$form-control-background-color = #fff
+$form-control-border-color = #82807c
+$form-control-border-radius = 0
+$form-control-height = 34px
+//success
+$success-border-color = #3c763d
+$warning-border-color = #8a6d3b
+$error-border-color = #a94442
+//btn
+$btn-border-radius = 0
+//btn-custome
+$btn-custome-background = url(../images/btn-bg.jpg) left top repeat-x
+$btn-custome-color = #fff
+//login-exemple
+$input-with-icon-background = #fff
+$input-with-icon-glyphicon-color = #606060
+$input-with-icon-font-size = 12px
+$btn-full-background-color = #d16036
+$btn-full-color = #fff
+$btn-full-hover-color = #fff
+$btn-full-hover-background-color = #EB7043
+
+
+/* Mixins */
+//margin
+for i in (0..100)
+  .m{i}
+    margin i*1px
+  .ml{i}
+    margin-left i*1px
+  .mr{i}
+    margin-right i*1px
+  .mb{i}
+    margin-bottom i*1px
+  .mt{i}
+    margin-top i*1px
+//padding
+for i in (0..100)
+  .p{i}
+    padding i*1px
+  .pl{i}
+    padding-left i*1px
+  .pr{i}
+    padding-right i*1px
+  .pb{i}
+    padding-bottom i*1px
+  .pt{i}
+    padding-top i*1px
+
+
+/* Global */
+body
+  background-color #f1f1f1
+.wrapper
+  margin-bottom 60px
+hr
+  border-top 1px solid #ccc
+.title
+  margin-top 40px
+//form-template
+.form-control
+  border-radius $form-control-border-radius
+  background-color $form-control-background-color
+  border 1px solid $form-control-border-color
+  height $form-control-height
+.success
+  border-color $success-border-color
+  -webkit-box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+  box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+.warning
+  border-color $warning-border-color
+  -webkit-box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+  box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+.error
+  border-color $error-border-color
+  -webkit-box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+  box-shadow inset 0 1px 1px rgba(0,0,0,.075)
+.btn
+  border-radius $btn-border-radius
+.btn-custome
+  background $btn-custome-background
+  color $btn-custome-color
+  &:hover
+    color $btn-custome-color
+
+//login-exemple
+//.username
+.input-with-icon
+  width 100%
+  background $input-with-icon-background
+  border 1px solid $form-control-border-color
+  padding 5px
+  .glyphicon
+    color $input-with-icon-glyphicon-color
+  input 
+    border 0
+    outline 0
+    font-size $input-with-icon-font-size
+.btn-full
+  width 100%
+  background-color $btn-full-background-color
+  color $btn-full-color
+  font-weight bolder
+  text-shadow 0 0 3px #000
+  &:hover
+    color $btn-full-hover-color
+    background-color $btn-full-hover-background-color
+
+
+
+  
+  
+

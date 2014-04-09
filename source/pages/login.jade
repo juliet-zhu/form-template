@@ -1,0 +1,26 @@
+extends template/base
+block vars
+  - var page = "login"
+  - BASEURL = ".."
+block content
+  .container
+    .row.title
+      .col-sm-12
+        h3 登录表单
+    .row
+      hr
+      .col-sm-4
+        form(role='form')#login-form.form-style
+          .h4 登录**
+          .form-group
+            .input-with-icon
+              span.glyphicon.glyphicon-user
+              input#name(type='text', placeholder='用户名/手机号/邮箱',name='sign_id',required,autocomplete="off")
+          .form-group
+            .input-with-icon
+              span.glyphicon.glyphicon-lock
+              input#password(type='password', placeholder='密码',name='password',required,autocomplete="off")
+          .form-group
+            button.btn.btn-full(type='submit') 登&nbsp;&nbsp;录
+            a(href="#").pull-left.mt10 找回密码
+            a(href="#").pull-right.mt10 注册

@@ -37,9 +37,12 @@ module.exports = function(grunt) {
       }
     },
     stylus:{
+      options:{
+        compress:false
+      },
       dev:{
         files:{
-          'dev/css/main.css':['source/css/main.styl']
+          'dev/css/form.css':['source/css/form.styl']
         }
       }
     },
