@@ -12,13 +12,13 @@
       errorClass:'error',
       validClass:'success',
       highlight:function(element){
-        $(element).parent().addClass('error').removeClass('success');
+        $(element).parent().addClass('highlight-error').removeClass('highlight-success');
       },
       unhighlight:function(element){
-        $(element).parent().removeClass('error').addClass('success');
+        $(element).parent().removeClass('highlight-error').addClass('highlight-success');
       },
       errorPlacement:function(error,element){
-          error.insertAfter(element.parent(0));
+          error.insertAfter(element.parent());
       }
     });
   });

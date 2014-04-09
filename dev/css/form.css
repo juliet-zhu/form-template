@@ -3052,21 +3052,24 @@ hr {
 .success {
   color: #3c763d;
   border-color: #3c763d;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 }
 .warning {
   color: #8a6d3b;
   border-color: #8a6d3b;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
 }
 .error {
   color: #a94442;
   font-size: 12px;
   border-color: #a94442;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,0.075);
+}
+.highlight-success {
+  border: 1px solid #3c763d !important;
+}
+.highlight-error {
+  border: 1px solid #a94442 !important;
+}
+.highlight-warning {
+  border: 1px solid #8a6d3b !important;
 }
 .btn {
   border-radius: 0;
@@ -3077,6 +3080,9 @@ hr {
 }
 .btn-custome:hover {
   color: #fff;
+}
+.need {
+  color: #a94442;
 }
 .group {
   min-height: 55px;
@@ -3106,12 +3112,14 @@ hr {
 }
 .btn-full {
   width: 100%;
+}
+.btn-orange {
   background-color: #d16036;
   color: #fff;
   font-weight: bolder;
   text-shadow: 0 0 3px #000;
 }
-.btn-full:hover {
+.btn-orange:hover {
   color: #fff;
   background-color: #eb7043;
 }

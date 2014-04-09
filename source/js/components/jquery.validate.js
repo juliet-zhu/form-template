@@ -288,7 +288,7 @@ $.extend($.validator, {
 		number: "请输入有效的数字。",
 		digits: "Please enter only digits.",
 		creditcard: "请输入有效的信用卡号。",
-		equalTo: "请确认两次输入一致。",
+		equalTo: "输入不一致。",
 		maxlength: $.validator.format("请输入{0}以下的字符。"),
 		minlength: $.validator.format("请输入{0}以上个字符。"),
 		rangelength: $.validator.format("请输入{0}至{1}个字符。"),
