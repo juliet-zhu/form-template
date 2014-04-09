@@ -1,0 +1,25 @@
++function($){
+  $(document).ready(function(){
+    $('#login-form').validate({
+      rules:{
+        username:{
+          required:true
+        },
+        password:{
+          required:true
+        }
+      },
+      errorClass:'error',
+      validClass:'success',
+      highlight:function(element){
+        $(element).parent().addClass('error').removeClass('success');
+      },
+      unhighlight:function(element){
+        $(element).parent().removeClass('error').addClass('success');
+      },
+      errorPlacement:function(error,element){
+          error.insertAfter(element.parent(0));
+      }
+    });
+  });
+}(jQuery);

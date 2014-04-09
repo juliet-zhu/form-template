@@ -10,17 +10,21 @@ block content
     .row
       hr
       .col-sm-4
-        form(role='form')#login-form.form-style
+        form(role='form')#login-form
           .h4 登录**
-          .form-group
+          .group
             .input-with-icon
               span.glyphicon.glyphicon-user
-              input#name(type='text', placeholder='用户名/手机号/邮箱',name='sign_id',required,autocomplete="off")
-          .form-group
+              input(type='text', placeholder='用户名/手机号/邮箱',name='username',required, autocomplete="off")
+          .group
             .input-with-icon
               span.glyphicon.glyphicon-lock
-              input#password(type='password', placeholder='密码',name='password',required,autocomplete="off")
+              input(type='password', placeholder='密码',name='password', required, autocomplete="off")
           .form-group
             button.btn.btn-full(type='submit') 登&nbsp;&nbsp;录
             a(href="#").pull-left.mt10 找回密码
             a(href="#").pull-right.mt10 注册
+block js
+  script(src="../js/components/jquery.validate.js")
+  script(src="../js/components/login.js")
+

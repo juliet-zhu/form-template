@@ -4,10 +4,13 @@ $form-control-background-color = #fff
 $form-control-border-color = #82807c
 $form-control-border-radius = 0
 $form-control-height = 34px
-//success
+//success,error,warning
 $success-border-color = #3c763d
 $warning-border-color = #8a6d3b
 $error-border-color = #a94442
+$success-color = #3c763d
+$warning-color = #8a6d3b
+$error-color = #a94442
 //btn
 $btn-border-radius = 0
 //btn-custome
@@ -66,14 +69,18 @@ hr
   border 1px solid $form-control-border-color
   height $form-control-height
 .success
+  color $success-color
   border-color $success-border-color
   -webkit-box-shadow inset 0 1px 1px rgba(0,0,0,.075)
   box-shadow inset 0 1px 1px rgba(0,0,0,.075)
 .warning
+  color $warning-color
   border-color $warning-border-color
   -webkit-box-shadow inset 0 1px 1px rgba(0,0,0,.075)
   box-shadow inset 0 1px 1px rgba(0,0,0,.075)
 .error
+  color $error-color
+  font-size 12px
   border-color $error-border-color
   -webkit-box-shadow inset 0 1px 1px rgba(0,0,0,.075)
   box-shadow inset 0 1px 1px rgba(0,0,0,.075)
@@ -86,7 +93,8 @@ hr
     color $btn-custome-color
 
 //login-exemple
-//.username
+.group
+  min-height 55px
 .input-with-icon
   width 100%
   background $input-with-icon-background
@@ -98,6 +106,13 @@ hr
     border 0
     outline 0
     font-size $input-with-icon-font-size
+  &.error
+    border 1px solid $error-border-color
+  &.success
+    border 1px solid $success-border-color
+  &.warning
+    border 1px solid $warning-border-color
+    
 .btn-full
   width 100%
   background-color $btn-full-background-color
