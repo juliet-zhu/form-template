@@ -16,26 +16,26 @@ block content
               span.need *
             .col-sm-6
               input#name.form-control(type='text', placeholder='请输入会员名称',name='username',required)
-            .note(style="display:none;clear:both;") 
+            .note(style="display:none;") 5-25个字符，一个汉字为两个字符，推荐使用中文会员名。
           .form-group
             label.control-label.col-sm-2(for='email') 邮箱
               span.need *
             .col-sm-6
               input#email.form-control(type='email', placeholder='请输入邮箱',name='email',required)
-            .note(style="display:none;clear:both;") 
+            .note(style="display:none;") 请使用常用邮箱注册
           .form-group
             label.control-label.col-sm-2(for='password') 密码
               span.need *
             .col-sm-6
               input#password.form-control(type='password', placeholder='请输入登录密码',name='password',required)
-            .note(style="display:none;clear:both;") 
+            .note(style="display:none;") 6-16个字符，请使用字母加数字或符号的组合密码
           .form-group
             label.control-label.col-sm-2(for='comfirm-password') 确认密码
               span.need *
             .col-sm-6
               input#comfirm-password.form-control(type='password', placeholder='请确认密码',name='comfirmPassword',required)
-            .note(style="display:none;clear:both;") 
-          .form-group
+            .note(style="display:none;") 再输一次密码
+          .form-group.mt15
             .col-sm-offset-2.col-sm-6
               button.btn.btn-full.btn-orange(type='submit') 注册
 block js

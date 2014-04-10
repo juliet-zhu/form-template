@@ -31,7 +31,7 @@
         $(element).removeClass('highlight-error').addClass('highlight-success');
       },
       errorPlacement:function(error,element){
-          error.insertAfter(element.parent());
+        error.insertAfter(element.parent());
       }
     });
   });

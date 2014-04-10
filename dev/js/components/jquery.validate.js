@@ -226,7 +226,6 @@ $.extend($.validator, {
 		ignoreTitle: false,
 		onfocusin: function( element, event ) {
 			this.lastActive = element;
-
 			// hide error label and remove error class on focus if enabled
 			if ( this.settings.focusCleanup && !this.blockFocusCleanup ) {
 				if ( this.settings.unhighlight ) {
@@ -234,11 +233,17 @@ $.extend($.validator, {
 				}
 				this.addWrapper(this.errorsFor(element)).hide();
 			}
+			if($(element).hasClass('highlight-success') || $(element).hasClass('highlight-error')){
+	       return;
+	    }else{
+	      $(element).closest('.form-group').find('.note').show();
+	    }
 		},
 		onfocusout: function( element, event ) {
 			if ( !this.checkable(element) && (element.name in this.submitted || !this.optional(element)) ) {
 				this.element(element);
 			}
+			//$(element).closest('.form-group').find('.note').hide()
 		},
 		onkeyup: function( element, event ) {
 			if ( event.which === 9 && this.elementValue(element) === "" ) {
@@ -667,6 +672,8 @@ $.extend($.validator, {
 				}
 			}
 			this.toHide = this.toHide.not( this.toShow );
+			//hide .note
+			$('.note').hide()
 			this.hideErrors();
 			this.addWrapper( this.toShow ).show();
 		},
@@ -1220,7 +1227,6 @@ $.extend($.validator, {
 		QQNum:function(value,element){
 			return /^\s*[.0-9]{5,10}\s*$/.test(value);
 		}
-
 	}
 
 });
