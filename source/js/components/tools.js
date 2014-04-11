@@ -7,8 +7,8 @@ window.tools={
               lis.each(function(index){
                 var field = $(this).attr('field');
                 var value = $(this).html();
-                var $append_selector = $('[name='+field+']').parents('.form-group');
-                $('<label/>').attr('id','error_tip_'+field).attr('class','error').html(value).appendTo($append_selector);   
+                var $append_selector = $('[name='+field+']').parent();
+                $('<label/>').attr('class','error').attr('for',field).html(value).insertAfter($append_selector);   
               }); 
             }else{
               return;
