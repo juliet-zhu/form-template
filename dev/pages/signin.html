@@ -19,34 +19,42 @@
           <div class="row">
             <hr>
             <div class="col-sm-12">
+              <div id="error_tip">
+                <ul>
+                  <li field="username">用户名不能为空</li>
+                  <li field="email">邮箱不能为空</li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-sm-12">
               <form role="form" id="signin-form" class="form-horizontal">
                 <div class="form-group">
-                  <label for="name" class="control-label col-sm-2">会员名<span class="need">*</span></label>
+                  <label for="username" class="control-label col-sm-2">会员名<span class="need">*</span></label>
                   <div class="col-sm-6">
-                    <input id="name" type="text" placeholder="请输入会员名称" name="username" required class="form-control">
+                    <input id="username" type="text" placeholder="请输入会员名称" name="username" required class="form-control">
                   </div>
-                  <div style="display:none;" class="note">5-25个字符，一个汉字为两个字符，推荐使用中文会员名。</div>
+                  <div style="display:none;" id="note-username" class="note">5-25个字符，一个汉字为两个字符，推荐使用中文会员名。</div>
                 </div>
                 <div class="form-group">
                   <label for="email" class="control-label col-sm-2">邮箱<span class="need">*</span></label>
                   <div class="col-sm-6">
                     <input id="email" type="email" placeholder="请输入邮箱" name="email" required class="form-control">
                   </div>
-                  <div style="display:none;" class="note">请使用常用邮箱注册</div>
+                  <div style="display:none;" id="note-email" class="note">请使用常用邮箱注册</div>
                 </div>
                 <div class="form-group">
                   <label for="password" class="control-label col-sm-2">密码<span class="need">*</span></label>
                   <div class="col-sm-6">
                     <input id="password" type="password" placeholder="请输入登录密码" name="password" required class="form-control">
                   </div>
-                  <div style="display:none;" class="note">6-16个字符，请使用字母加数字或符号的组合密码</div>
+                  <div style="display:none;" id="note-password" class="note">6-16个字符，请使用字母加数字或符号的组合密码</div>
                 </div>
                 <div class="form-group">
                   <label for="comfirm-password" class="control-label col-sm-2">确认密码<span class="need">*</span></label>
                   <div class="col-sm-6">
                     <input id="comfirm-password" type="password" placeholder="请确认密码" name="comfirmPassword" required class="form-control">
                   </div>
-                  <div style="display:none;" class="note">再输一次密码</div>
+                  <div style="display:none;" id="note-comfirmPassword" class="note">再输一次密码</div>
                 </div>
                 <div class="form-group mt15">
                   <div class="col-sm-offset-2 col-sm-6">
@@ -63,5 +71,25 @@
     <script src="../js/libs/responsive.min.js"></script>
     <script src="../js/components/jquery.validate.js"></script>
     <script src="../js/components/signin.js"></script>
+    <script>
+      $(document).ready(function(){ 
+        function getTips(selector){
+              var lis = $(selector).find('li');
+              if(lis.length){
+                $('.note').hide();
+                $('.error').hide();
+                lis.each(function(index){
+                  var field = $(this).attr('field');
+                  var value = $(this).html();
+                  var $append_selector = $('[name='+field+']').parents('.form-group');
+                  $('<label/>').attr('id','error_tip_'+field).attr('class','error').html(value).appendTo($append_selector);   
+                }); 
+              }else{
+                return;
+              }
+        }
+        getTips('#error_tip')
+      });
+    </script>
   </body>
 </html>

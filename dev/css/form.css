@@ -3127,6 +3127,7 @@ hr {
   width: 25%;
   display: inline-block;
   font-size: 12px;
+  color: #8a6d3b;
 }
 @media (max-width:767px) {
   .form-group {
@@ -3139,6 +3140,5 @@ hr {
   .note {
     width: 100%;
     padding: 0 15px;
-    color: #8a6d3b;
   }
 }

@@ -235,7 +235,7 @@ $.extend($.validator, {
 			}
 			if($(element).hasClass('highlight-success') || $(element).hasClass('highlight-error')){
 	       return;
-	    }else{
+	    }else if(!$(element).closest('.form-group').find('.error').length){
 	      $(element).closest('.form-group').find('.note').show();
 	    }
 		},
