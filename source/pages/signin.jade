@@ -20,25 +20,25 @@ block content
             label.control-label.col-sm-2(for='username') 会员名
               span.need *
             .col-sm-6
-              input#username.form-control(type='text', placeholder='请输入会员名称',name='username',required)
+              input#username.form-control(type='text', placeholder='请输入会员名称',name='username',required, autocomplete="off")
             .note(style="display:none;")#note-username 5-25个字符，一个汉字为两个字符，推荐使用中文会员名。
           .form-group
             label.control-label.col-sm-2(for='email') 邮箱
               span.need *
             .col-sm-6
-              input#email.form-control(type='email', placeholder='请输入邮箱',name='email',required)
+              input#email.form-control(type='email', placeholder='请输入邮箱',name='email',required, autocomplete="off")
             .note(style="display:none;")#note-email 请使用常用邮箱注册
           .form-group
             label.control-label.col-sm-2(for='password') 密码
               span.need *
             .col-sm-6
-              input#password.form-control(type='password', placeholder='请输入登录密码',name='password',required)
+              input#password.form-control(type='password', placeholder='请输入登录密码',name='password',required, autocomplete="off")
             .note(style="display:none;")#note-password 6-16个字符，请使用字母加数字或符号的组合密码
           .form-group
             label.control-label.col-sm-2(for='comfirm-password') 确认密码
               span.need *
             .col-sm-6
-              input#comfirm-password.form-control(type='password', placeholder='请确认密码',name='comfirmPassword',required)
+              input#comfirm-password.form-control(type='password', placeholder='请确认密码',name='comfirmPassword',required, autocomplete="off")
             .note(style="display:none;")#note-comfirmPassword 再输一次密码
           .form-group.mt15
             .col-sm-offset-2.col-sm-6
