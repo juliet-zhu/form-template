@@ -12,7 +12,7 @@ block content
       .col-sm-12
         #error_tip
           ul
-            li(field="username") 用户名不能为空
+            li(field="sign_id") 用户名不能为空
             li(field="password") 邮箱不能为空
       .col-sm-4
         form(role='form')#login-form
@@ -20,7 +20,7 @@ block content
           .form-group(style="min-height:55px")
             .input-with-icon
               span.glyphicon.glyphicon-user
-              input(type='text', placeholder='用户名/手机号/邮箱',name='username',required, autocomplete="off")
+              input(type='text', placeholder='用户名/手机号/邮箱',name='sign_id',required, autocomplete="off")
           .form-group
             .input-with-icon
               span.glyphicon.glyphicon-lock
@@ -30,7 +30,7 @@ block content
             a(href="#").pull-left.mt10 找回密码
             a(href="#").pull-right.mt10 注册
 block js
-  script(src="../js/components/jquery.validate.js")
+  script(src="../js/components/jquery.validate.js") 
   script(src="../js/components/login.js")
   script(src="../js/components/tools.js")
   script.

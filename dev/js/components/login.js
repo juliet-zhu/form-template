@@ -2,7 +2,7 @@
   $(document).ready(function(){
     $('#login-form').validate({
       rules:{
-        username:{
+        sign_id:{
           required:true
         },
         password:{
