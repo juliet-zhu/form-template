@@ -1,0 +1,24 @@
+extends template/base
+block vars
+  - var page = "sigle-check"
+  - BASEURL = ".."
+block content
+  .container
+    .row.title
+      .col-sm-12
+        h3 基本表单
+    .row
+      hr
+      .col-sm-6
+        form(role='form')
+          .form-group
+            label(for='exampleInputEmail1') 邮箱
+            input#exampleInputEmail1.form-control(type='email', placeholder='Enter email')
+          .form-group
+            label(for='exampleInputPassword1') 密码
+            input#exampleInputPassword1.form-control(type='password', placeholder='Password')
+block js
+  script(src="../js/components/wissso.core.js")
+  script(src="../js/components/WISSSO.tools.js")
+  script.
+    WISSSO.tools.singleCheck({selector:'#exampleInputEmail1'});
